@@ -33,13 +33,13 @@ ms_size = 38
 
 # x = range(len(dims))
 x = dims
-fig = plt.figure(num=1, figsize=(36, 12))
-ax1 = fig.add_subplot(121)
+fig = plt.figure(num=1, figsize=(18, 24))
+ax1 = fig.add_subplot(211)
 
-y_f1 = [0.5149, 0.5178, 0.5221, 0.5168, 0.5109, 0.5131, 0.5078]
-y_precision = [0.5988, 0.5642, 0.6340, 0.5609, 0.5551, 0.5355, 0.5296]
-y_recall = [0.4516, 0.4784,0.4438, 0.4791, 0.4732, 0.4925, 0.4877]
-y_comm_size = [2029, 2281, 1883, 2298, 2293, 2474, 2477]
+y_f1 = [0.5084, 0.5096, 0.5119, 0.5035, 0.5001, 0.4949, 0.4472]
+y_precision = [0.4973, 0.5680, 0.5273, 0.5825, 0.5454, 0.4962, 0.3831]
+y_recall = [0.5200, 0.4620,0.4973, 0.4434, 0.4617, 0.4936, 0.5371]
+y_comm_size = [2813, 2188, 2537, 2048, 2277, 2676, 23771]
 
 ax1.plot(x, y_f1, marker='o', ms=ms_size, mec='black', mew=2, label=r'F1', linewidth=7)
 ax1.plot(x, y_precision, marker='d', ms=ms_size, mec='black', mew=2, label=r'Precision', linewidth=7)
@@ -52,7 +52,7 @@ ax1.set_xticklabels(dims_name)
 # ax1.set_xticks([64, 128, 256, 512])
 ax1.margins(margins)
 # ax1.subplots_adjust(bottom=0.15)
-ax1.set_xlabel(u"Embedding Size", fontsize=ylabel_font_size) #X轴标签
+ax1.set_xlabel(u"Embedding Dimension", fontsize=ylabel_font_size) #X轴标签
 # ax1.set_ylim((0.17, 0.25))
 # y_tick11 = np.linspace(0.17, 0.27, 4)
 # plt.yticks(y_tick11, fontsize=y_trick_font_size)
@@ -85,7 +85,7 @@ ax1.grid()
 # plt.show()
 
 
-ax2 = fig.add_subplot(122)
+ax2 = fig.add_subplot(212)
 # AMiner = [0.0979, 0.0864, 0.0940, 0.0985, 0.0963, 0.0979]
 
 #ax2.plot(x, y_comm_size, marker='o', ms=ms_size,mec='black', mew=2, label=r'Community size', linewidth=7)
@@ -110,7 +110,7 @@ plt.yticks(fontsize=y_trick_font_size)
 # ax2.set_xticklabels(['12', "13", "21", '23', '31', '32'])
 ax2.margins(margins)
 # ax2.subplots_adjust(bottom=0.15)
-ax2.set_xlabel(u"Embedding Size", fontsize=ylabel_font_size) #X轴标签
+ax2.set_xlabel(u"Embedding Dimension", fontsize=ylabel_font_size) #X轴标签
 # ax2.set_ylabel("Recall", fontsize=15) #Y轴标签
 # ax2.set_ylim((0.08, 0.105))
 # y_tick = np.linspace(0.075, 0.11, 4)
